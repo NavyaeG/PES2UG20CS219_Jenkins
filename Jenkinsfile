@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages{
-    stage('Build'){
+    stage('Build') {
       steps {
         sh 'g++ main/test.cpp -o output'
         build 'PES2UG20CS219-1'
@@ -27,10 +27,9 @@ pipeline {
   }
   post {
     failure {
-      echo 'Pipeline failed'
+      echo 'Pipeline Failed'
     }
   }
-  
 }
 
     
